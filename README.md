@@ -11,6 +11,7 @@
 - [x] Environemt variables management with dotenv
 - [x] Logger - Using `winston` to padronize and format logs. For now, logs will only be transported to console.
 - [x] Express - Basic middlewares (XSS, Helmet, Bodyparser), basic headers (CORS, disable x-powered-by), health check route, http server and requests logs. 
+- [x] CI - Github Actions running tests on push in any branch.
 - [ ] Example route
 - [ ] Auth
 - [ ] Code coverage >= 95%
