@@ -1,0 +1,18 @@
+FROM node:14.15-alpine as base
+
+LABEL maintainer="kaic"
+
+RUN apk update
+
+ARG NODE_ENV=test
+ENV NODE_ENV ${NODE_ENV}
+
+WORKDIR /app
+ADD package.json /app
+ADD package-lock.json /app
+RUN npm install
+ADD . /app
+
+RUN chmod +x /app/scripts/start_server_test.sh
+
+ENTRYPOINT ["sh","-c","/app/scripts/start_server_test.sh"]

@@ -1,0 +1,20 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ES2019",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "outDir": "build",
+        "baseUrl": "./",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "paths": {
+            "@src/*": ["src/*"],
+            "@bin/*": ["src/bin/*"],
+            "@config/*": ["src/config/*"],
+        },
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules"]
+}

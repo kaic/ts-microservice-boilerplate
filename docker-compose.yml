@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  api-development:
+    restart: on-failure
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+       - ${PORT}:${PORT}
+    volumes:
+      - ./:/app
+    healthcheck:
+      test: [ "CMD", "curl" , "-f", "localhost:${PORT}/v1" ]
+      interval: 10s
+      retries: 5
+      
+  api-test:
+    build:
+      context: ./
+      dockerfile: Dockerfile.test
+    environment:
+      NODE_ENV: test
+    volumes:
+      - ./:/app
