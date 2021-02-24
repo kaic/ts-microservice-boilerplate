@@ -14,7 +14,7 @@ const config: Config.InitialOptions = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'node'],
   moduleNameMapper: {
     '^@src/(.*)$': resolve(__dirname, './src/$1'),
-    '^@config/(.*)$': resolve(__dirname, './src/config/$1'),
+    '^@config/(.*)$': resolve(__dirname, './src/config/$1')
   }
 }
 export default config

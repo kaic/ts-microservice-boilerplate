@@ -1,7 +1,6 @@
 import http from 'http'
 import xss from 'xss-clean'
 import helmet from 'helmet'
-import bodyParser from 'body-parser'
 import controller from 'express-power-router'
 import express, { Request, Response, NextFunction } from 'express'
 
